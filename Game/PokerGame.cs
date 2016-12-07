@@ -26,14 +26,26 @@ namespace Game
         {
             List<PlayerEntity> playersInRound = players;
             postBlinds();
-            dealCards();
-            
-            foreach (Player p in players)
-            {
-                p.yourTurn(allowedActionsList);
-                p.MinBet = currentBet;
-            }
-        }
+			dealCards();
+			while (playersInRound.Count > 1) {
+
+				//change this :D
+				foreach (Player p in players)
+            	{
+                	p.yourTurn(allowedActionsList);
+                	p.MinBet = currentBet;
+            	}
+
+
+				if (gameState.Equals(river)) {
+					break;
+				}
+
+				addNewCard(gameState);
+
+			}
+			checkWinner(playersInRound);
+		}
 
         private void makeBet(Player p, float betAmount)
         {
