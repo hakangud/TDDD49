@@ -10,10 +10,10 @@ namespace Game
     abstract class Player : PlayerEntity
     {
         private float minBet;
-
         public abstract void yourTurn(List<Enum> allowedActionsList);
 
-        public float MinBet {
+        public float MinBet
+        {
             get
             {
                 return minBet;
@@ -22,6 +22,6 @@ namespace Game
             {
                 minBet = value;
             }
-            }
+        }
     }
 }

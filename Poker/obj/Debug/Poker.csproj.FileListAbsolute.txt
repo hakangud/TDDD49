@@ -12,3 +12,9 @@ c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\Poker.Properties.
 c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\Poker.csproj.GenerateResource.Cache
 c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\Poker.exe
 c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\Poker.pdb
+c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\PlayerInfo.g.cs
+c:\documents\visual studio 2015\Projects\Poker\Poker\obj\Debug\PlayerInfo.baml
+c:\documents\visual studio 2015\Projects\Poker\Poker\bin\Debug\EntityFramework.dll
+c:\documents\visual studio 2015\Projects\Poker\Poker\bin\Debug\EntityFramework.SqlServer.dll
+c:\documents\visual studio 2015\Projects\Poker\Poker\bin\Debug\EntityFramework.xml
+c:\documents\visual studio 2015\Projects\Poker\Poker\bin\Debug\EntityFramework.SqlServer.xml
