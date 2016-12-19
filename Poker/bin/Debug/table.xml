@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table>
+  <Table ID="1" />
+  <Players>
+    <Player>
+      <Name>Fia</Name>
+      <Chips>1000</Chips>
+    </Player>
+    <Player>
+      <Name>Fia</Name>
+    </Player>
+  </Players>
+</Table>
