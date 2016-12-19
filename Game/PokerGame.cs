@@ -13,13 +13,15 @@ namespace Game
         protected int smallBlind = 10;
         protected float pot;
         protected float currentBet;
-
-        List<PlayerEntity> players;
-        List<Enum> allowedActionsList;
+        protected Deck deck;
+        protected List<PlayerEntity> players;
+        protected List<Enum> allowedActionsList;
 
         public PokerGame(List<PlayerEntity> pl)
         {
             players = pl;
+            deck = new Deck();
+            deck.setUpDeck();
         }
 
         public void playRound()
@@ -32,6 +34,10 @@ namespace Game
             {
                 p.yourTurn(allowedActionsList);
                 p.MinBet = currentBet;
+                if (p.pAction.Equals(Enum.bet))
+                {
+
+                }
             }
         }
 

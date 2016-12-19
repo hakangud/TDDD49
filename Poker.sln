@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "Poker\GUI.csproj", "{94CE8748-58E5-4467-8908-4B548E58FA66}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{78C0730B-C678-47ED-BB2C-7C27829E06F7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{2BDE2D5F-DE21-4BC9-9944-886CF134431F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker", "Poker\Poker.csproj", "{94CE8748-58E5-4467-8908-4B548E58FA66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		{94CE8748-58E5-4467-8908-4B548E58FA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94CE8748-58E5-4467-8908-4B548E58FA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94CE8748-58E5-4467-8908-4B548E58FA66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78C0730B-C678-47ED-BB2C-7C27829E06F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78C0730B-C678-47ED-BB2C-7C27829E06F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78C0730B-C678-47ED-BB2C-7C27829E06F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78C0730B-C678-47ED-BB2C-7C27829E06F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BDE2D5F-DE21-4BC9-9944-886CF134431F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BDE2D5F-DE21-4BC9-9944-886CF134431F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BDE2D5F-DE21-4BC9-9944-886CF134431F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BDE2D5F-DE21-4BC9-9944-886CF134431F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
