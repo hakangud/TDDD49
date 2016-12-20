@@ -15,10 +15,10 @@ namespace Poker.Game
         protected float pot;
         protected float currentBet;
         protected Deck deck;
-        protected List<PlayerEntity> players;
+        protected List<Player> players;
         protected List<Enum> allowedActionsList;
 
-        public PokerGame(List<PlayerEntity> pl)
+        public PokerGame(List<Player> pl)
         {
             players = pl;
             deck = new Deck();
@@ -27,7 +27,7 @@ namespace Poker.Game
 
         public void playRound()
         {
-            List<PlayerEntity> playersInRound = players;
+            List<Player> playersInRound = players;
             postBlinds();
             //dealCards();
             

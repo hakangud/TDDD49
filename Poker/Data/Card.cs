@@ -50,5 +50,15 @@ namespace Poker.Data
         }
         public SUIT MySuit { get; set; }
         public VALUE MyValue { get; set; }
+
+        public static bool operator ==(Card c1, Card c2)
+        {
+            return c1.MySuit == c2.MySuit && c1.MyValue == c2.MyValue;
+        }
+
+        public static bool operator !=(Card c1, Card c2)
+        {
+            return c1.MySuit != c2.MySuit || c1.MyValue != c2.MyValue;
+        }
     }
 }

@@ -17,22 +17,7 @@ namespace Poker.Game
 
         }
 
-        List<PlayerEntity> players;
-        int tableID;
-        Deck deck;
-        private int pot;
-        public int Pot
-        {
-            get { return Pot; }
-            set
-            {
-                if (Pot != value)
-                {
-                    Pot = value;
-                    OnpropertyChanged("Pot");
-                }
-            }
-        }
+        
 
     }
 }

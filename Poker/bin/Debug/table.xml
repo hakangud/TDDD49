@@ -1,13 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Table>
-  <Table ID="1" />
+  <Pot>20</Pot>
   <Players>
     <Player>
       <Name>Fia</Name>
-      <Chips>1000</Chips>
+      <Chips>2000</Chips>
+      <BetAmount>20</BetAmount>
+      <Folded>false</Folded>
+      <IsActive>true</IsActive>
+      <ControlledByUser>true</ControlledByUser>
+      <Seat>1</Seat>
+      <Card1Suit>2</Card1Suit>
+      <Card1Value>11</Card1Value>
+      <Card2Suit>2</Card2Suit>
+      <Card2Value>2</Card2Value>
     </Player>
     <Player>
-      <Name>Fia</Name>
+      <Name>Frans</Name>
+      <Chips>2000</Chips>
+      <BetAmount>20</BetAmount>
+      <Folded>false</Folded>
+      <IsActive>false</IsActive>
+      <ControlledByUser>false</ControlledByUser>
+      <Seat>2</Seat>
+      <Card1Suit>1</Card1Suit>
+      <Card1Value>1</Card1Value>
+      <Card2Suit>2</Card2Suit>
+      <Card2Value>1</Card2Value>
     </Player>
   </Players>
+  <CardsOnTable />
 </Table>

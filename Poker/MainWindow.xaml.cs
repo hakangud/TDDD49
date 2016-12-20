@@ -17,6 +17,7 @@ using Poker.Game;
 using System.Xml.Linq;
 using System.Xml;
 using System.Data;
+using Poker.Data;
 
 namespace Poker
 {
@@ -31,14 +32,14 @@ namespace Poker
         private static GameContext db = new GameContext();
         public MainWindow()
         {
-            PlayerEntity pe = new PlayerEntity();
+            Player pe = new HumanPlayer();
 
-            List<PlayerEntity> pl = new List<PlayerEntity>();
-            foreach (DataRow o1 in pl.Tables[0].Rows)
+            List<Player> pl = new List<Player>();
+            //foreach (DataRow o1 in pl.Tables[0].Rows)
             InitializeComponent();
             p = new HumanPlayer();
             pe.PlayerName = "Klara";
-            p = (HumanPlayer)pe;
+            //p = (HumanPlayer)pe;
             player1NameTextBlock.Text = p.PlayerName;
             /*
             p.PlayerName = "Hans";
@@ -62,57 +63,52 @@ namespace Poker
                 new XElement("Players",
                 new XElement("Names",
                 new XAttribute("Name", "Hans"),
-                new XAttribute("Name1", "Peter")))));
-            XElement table = new XElement("Table",
-                new XElement("Table",
-                new XAttribute("ID", 1)));
+                new XAttribute("Name1", "Peter")))));*/
 
-            XElement players = new XElement("Players");
-            players.Add(new XElement("Player",
-                new XElement("Name", "Petter"),
-                new XElement("Chips", 1000)));
-            players.Add(new XElement("Player",
-                new XElement("Name", "Frans")));
+            PokerTable pt = GameUtility.LoadTable();
+            //pt.Pot = 20;
+            //GameUtility.SeedXML();
+            //pl = GameUtility.LoadPlayers();
+            //Card c1 = new Card { MySuit = Card.SUIT.SPADES, MyValue = Card.VALUE.KING };
+            //List<Card> cl = new List<Card>();
+            //cl.Add(c1);
+            //pt.CardsOnTable = cl;
+            //pl[0].cards[0] = c1;
+            //GameUtility.SavePlayerHands(pl);
+            //player1NameTextBlock.Text = pl[1].PlayerName;
 
-            //XElement drawnCards = new XElement("Drawn Cards");
+            //GameUtility.SaveTableState(pt);
+            //// use to remove cards from
+            //pl[0].cards.RemoveAll(x => x.MyValue == Card.VALUE.ACE && x.MySuit == Card.SUIT.CLUBS);
+            //XDocument xd = XDocument.Load("table.xml");
 
-
-            table.Add(players);
-            table.Save("table.xml");
-
-            List<PlayerEntity> pl = new List<PlayerEntity>();
-            XDocument xd = XDocument.Load("table.xml");
-
+            //xd.Descendants("CardValue")
+            //    .Remove();
             // set data to xml
-            var items = from item in xd.Descendants("Player")
-                        select item;
-
-            foreach (XElement itemElement in items)
-            {
-                itemElement.SetElementValue("Name", "Fia");
-            }
-
-            // get data from xml
-            var player = from p in xd.Descendants("Player")
-                         select new
-                         {
-                             Name = (string)p.Element("Name")
-                         };
-            foreach (var p in player)
-            {
-                pl.Add(new HumanPlayer { PlayerName = p.Name });
-            }
-
-            xd.Save("table.xml");
             
 
-            player1NameTextBlock.Text = pl[0].PlayerName;
-            player2NameTextBlock.Text = pl[1].PlayerName;*/
+            // get data from xml
+            //var player = from p in xd.Descendants("Player")
+            //             select new
+            //             {
+            //                 Name = (string)p.Element("Name")
+                             
+            //             };
+            //foreach (var p in player)
+            //{
+            //    pl.Add(new HumanPlayer { PlayerName = p.Name });
+            //}
+
+            //xd.Save("table.xml");
+            
+
+            //player1NameTextBlock.Text = pl[0].PlayerName;
+            //player2NameTextBlock.Text = pl[1].PlayerName;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            p.PlayerName = xdoc.ToString();
+            //p.PlayerName = xdoc.ToString();
         }
     }
 }
