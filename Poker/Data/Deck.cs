@@ -38,7 +38,7 @@ namespace Poker.Data
                 {
                     foreach (Card c in cardsOnTable)
                     {
-                        if (c.MySuit == s && c.MyValue == v) { continue; }
+                        if (c.MySuit == s && c.MyValue == v) { break; }
                         else { deck.Push(new Card { MySuit = s, MyValue = v }); }
                     }
                 }
