@@ -29,7 +29,6 @@ namespace Poker
         private Player p, p2;
         private PokerTable pt;
         private XDocument xdoc;
-        private static GameContext db = new GameContext();
         public MainWindow()
         {
             Player pe = new HumanPlayer();

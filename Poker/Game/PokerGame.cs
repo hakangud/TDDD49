@@ -18,9 +18,12 @@ namespace Poker.Game
         protected List<Player> players;
         protected List<Enum> allowedActionsList;
 
-        public PokerGame(List<Player> pl)
+        private PokerTable table;
+
+        public PokerGame()
         {
-            players = pl;
+            table = GameUtility.LoadTable();
+
             deck = new Deck();
             deck.setUpDeck();
         }

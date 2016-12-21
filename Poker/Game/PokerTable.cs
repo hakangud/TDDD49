@@ -10,7 +10,7 @@ namespace Poker.Game
 {
     class PokerTable : Changeable
     {
-        public List<Player> players { get; set; }
+        private List<Player> players;
         public Deck deck { get; set; }
 
         private List<Card> cardsOnTable;
@@ -40,5 +40,31 @@ namespace Poker.Game
                 }
             }
         }
+
+        public PokerTable(List<Player> pl)
+        {
+            players = pl;
+
+            foreach (var player in players)
+            {
+                player.table = this;
+            }
+        }
+
+        public void dealCards()
+        {
+            deck.setUpDeck();
+            Stack<Card> cards = deck.getDeck;
+
+            foreach (var player in players)
+            {
+                player.Cards.Add(cards.Pop());
+                player.Cards.Add(cards.Pop());
+            }
+
+            GameUtility.SavePlayerHands(players);
+        }
+
+
     }
 }

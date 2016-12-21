@@ -9,25 +9,22 @@ namespace Poker.Data
     class Deck : Card
     {
         const int NUM_OF_CARDS = 52;
-        private Card[] deck;
+        private Stack<Card> deck;
 
         public Deck()
         {
-            deck = new Card[NUM_OF_CARDS];
+            deck = new Stack<Card>();
         }
 
-        public Card[] getDeck { get { return deck; } }
+        public Stack<Card> getDeck { get { return deck; } }
 
         public void setUpDeck()
         {
-            int i = 0;
-
             foreach (SUIT s in Enum.GetValues(typeof(SUIT)))
             {
                 foreach (VALUE v in Enum.GetValues(typeof(VALUE)))
                 {
-                    deck[i] = new Card { MySuit = s, MyValue = v };
-                    i++;
+                    deck.Push(new Card { MySuit = s, MyValue = v });
                 }
             }
             shuffleDeck();
@@ -36,19 +33,11 @@ namespace Poker.Data
         public void shuffleDeck()
         {
             Random r = new Random();
-            Card tempCard;
+            var cards = deck.ToArray();
+            deck.Clear();
 
-            for (int shuffles = 0; shuffles < 1000; shuffles++)
-            {
-                for (int i = 0; i < NUM_OF_CARDS; i++)
-                {
-                    int cardIndex = r.Next(13);
-                    tempCard = deck[i];
-                    deck[i] = deck[cardIndex];
-                    deck[cardIndex] = tempCard;
-                }
-            }
+            foreach (var card in cards.OrderBy(x => r.Next()))
+                    deck.Push(card);
         }
-
     }
 }

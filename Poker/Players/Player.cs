@@ -70,7 +70,20 @@ namespace Poker.Players
             }
         }
 
-        public List<Card> cards { get; set; }
+        private List<Card> cards;
+        public List<Card> Cards
+        {
+            get { return cards; }
+            set
+            {
+                if (value != cards)
+                {
+                    cards = value;
+                    OnpropertyChanged("Cards");
+                }
+            }
+        }
+
         private int chips;
         public int Chips
         {

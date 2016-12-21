@@ -79,14 +79,11 @@
     <Compile Include="Data\Deck.cs" />
     <Compile Include="Data\Hand.cs" />
     <Compile Include="Data\GameUtility.cs" />
-    <Compile Include="Game\GameContext.cs" />
     <Compile Include="Game\PokerTable.cs" />
-    <Compile Include="Game\PokerTableEntity.cs" />
     <Compile Include="PlayerInfo.xaml.cs">
       <DependentUpon>PlayerInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Players\HumanPlayer.cs" />
-    <Compile Include="Players\PlayerEntity.cs" />
     <Compile Include="Players\AIPlayer.cs" />
     <Compile Include="Players\Player.cs" />
     <Compile Include="Game\PokerGame.cs" />

@@ -124,10 +124,10 @@ namespace Poker.Data
 
                 foreach (XElement itemElement in items)
                 {
-                    itemElement.SetElementValue("Card1Suit", (int)player.cards[0].MySuit);
-                    itemElement.SetElementValue("Card1Value", (int)player.cards[0].MyValue);
-                    itemElement.SetElementValue("Card2Suit", (int)player.cards[1].MySuit);
-                    itemElement.SetElementValue("Card2Value", (int)player.cards[1].MyValue);
+                    itemElement.SetElementValue("Card1Suit", (int)player.Cards[0].MySuit);
+                    itemElement.SetElementValue("Card1Value", (int)player.Cards[0].MyValue);
+                    itemElement.SetElementValue("Card2Suit", (int)player.Cards[1].MySuit);
+                    itemElement.SetElementValue("Card2Value", (int)player.Cards[1].MyValue);
                 }
             }
 
@@ -137,12 +137,11 @@ namespace Poker.Data
         public static PokerTable LoadTable()
         {
             XDocument xd = XDocument.Load(filename);
-            PokerTable pt = new PokerTable();
             List<Player> pl = LoadPlayers();
             List<Card> cl = LoadCardsOnTable();
+            PokerTable pt = new PokerTable(pl);
 
             pt.Pot = (int)xd.Root.Element("Pot");
-            pt.players = pl;
             pt.CardsOnTable = cl;
 
             return pt;
@@ -213,7 +212,7 @@ namespace Poker.Data
                 Card c2 = new Card { MySuit = (Card.SUIT)e.Card2Suit, MyValue = (Card.VALUE)e.Card2Value };
                 cards.Add(c1);
                 cards.Add(c2);
-                p.cards = cards;
+                p.Cards = cards;
 
                 pl.Add(p);
             }
