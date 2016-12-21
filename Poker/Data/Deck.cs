@@ -30,6 +30,22 @@ namespace Poker.Data
             shuffleDeck();
         }
 
+        public void setUpDeck(List<Card> cardsOnTable)
+        {
+            foreach (SUIT s in Enum.GetValues(typeof(SUIT)))
+            {
+                foreach (VALUE v in Enum.GetValues(typeof(VALUE)))
+                {
+                    foreach (Card c in cardsOnTable)
+                    {
+                        if (c.MySuit == s && c.MyValue == v) { continue; }
+                        else { deck.Push(new Card { MySuit = s, MyValue = v }); }
+                    }
+                }
+            }
+            shuffleDeck();
+        }
+
         public void shuffleDeck()
         {
             Random r = new Random();

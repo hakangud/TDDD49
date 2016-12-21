@@ -49,6 +49,11 @@ namespace Poker.Game
             {
                 player.table = this;
             }
+
+            if (cardsOnTable.Count() > 0)
+            {
+
+            }
         }
 
         public void dealCards()
