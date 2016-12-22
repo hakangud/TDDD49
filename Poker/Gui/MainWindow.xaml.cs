@@ -19,7 +19,7 @@ using System.Xml;
 using System.Data;
 using Poker.Data;
 
-namespace Poker
+namespace Poker.Gui
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

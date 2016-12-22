@@ -52,7 +52,7 @@ namespace Poker.Game
 
             if (cardsOnTable.Count() > 0)
             {
-
+                deck.setUpDeck(cardsOnTable);
             }
         }
 

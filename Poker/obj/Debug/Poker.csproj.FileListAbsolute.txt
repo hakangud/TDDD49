@@ -22,7 +22,6 @@ C:\Users\hakangud\Documents\tddd49\Poker\bin\Debug\Poker.exe.config
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.exe
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.pdb
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.csprojResolveAssemblyReference.cache
-C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\MainWindow.g.cs
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\PlayerInfo.g.cs
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\App.g.cs
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker_MarkupCompile.cache
@@ -33,8 +32,9 @@ C:\Users\hakangud\Documents\tddd49\Poker\bin\Debug\EntityFramework.dll
 C:\Users\hakangud\Documents\tddd49\Poker\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\hakangud\Documents\tddd49\Poker\bin\Debug\EntityFramework.xml
 C:\Users\hakangud\Documents\tddd49\Poker\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\MainWindow.baml
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\PlayerInfo.baml
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.g.resources
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.Properties.Resources.resources
 C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Poker.csproj.GenerateResource.Cache
+C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Gui\MainWindow.g.cs
+C:\Users\hakangud\Documents\tddd49\Poker\obj\Debug\Gui\MainWindow.baml

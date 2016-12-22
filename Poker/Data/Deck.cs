@@ -30,6 +30,11 @@ namespace Poker.Data
             shuffleDeck();
         }
 
+        /// <summary>
+        /// If a table is loaded where cards have been dealt to players 
+        /// run this function to remove all dealt cards from the new deck
+        /// </summary>
+        /// <param name="cardsOnTable"> The cards that are on the table </param>
         public void setUpDeck(List<Card> cardsOnTable)
         {
             foreach (SUIT s in Enum.GetValues(typeof(SUIT)))
@@ -38,8 +43,8 @@ namespace Poker.Data
                 {
                     foreach (Card c in cardsOnTable)
                     {
-                        if (c.MySuit == s && c.MyValue == v) { break; }
-                        else { deck.Push(new Card { MySuit = s, MyValue = v }); }
+                        if (c.MySuit == s && c.MyValue == v) break; 
+                        deck.Push(new Card { MySuit = s, MyValue = v });
                     }
                 }
             }
